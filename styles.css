@@ -1,0 +1,164 @@
+/* Reset básico e fontes importadas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('parallax-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo para o menu de navegação */
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #ffcc00;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #ffcc00;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00;
+    color: black;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Seção de álbuns */
+#albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px auto;
+    width: 90%;
+}
+
+.album {
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 3px solid #ffcc00;
+    padding: 20px;
+    width: 30%;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Animações específicas para cada álbum ao passar o mouse */
+#album1:hover {
+    background-color: #004d40; /* Verde escuro */
+    border-color: #004d40; /* Verde escuro */
+    color: #ffffff; /* Texto branco */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#album2:hover {
+    background-color: #d4a15b; /* Bege escuro */
+    border-color: #d4a15b; /* Bege escuro */
+    color: #000000; /* Texto preto */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#album3:hover {
+    background-color: #003366; /* Azul escuro */
+    border-color: #003366; /* Azul escuro */
+    color: #ffffff; /* Texto branco */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustes adicionais na imagem dos álbuns */
+.album img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efeito de hover na imagem dos álbuns */
+.album:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+/* Estilo para os subtítulos dos álbuns */
+.album h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Estilo para os parágrafos dos álbuns */
+.album p {
+    font-family: 'Roboto', sans-serif;
+    color: #dddddd;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background: linear-gradient(45deg, #ffcc00, #ff9900);
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    animation: footerAnimation 1s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+    border-top: 5px solid #ffcc00;
+}
+
+/* Animação do rodapé */
+@keyframes footerAnimation {
+    0% { transform: translateY(10px); opacity: 0.5; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Adicionando animação de brilho e destaque */
+footer:hover {
+    background: linear-gradient(45deg, #ff9900, #ffcc00);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
